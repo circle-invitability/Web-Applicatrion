@@ -9,6 +9,14 @@ import { IconContext } from "react-icons/lib";
 
 function Navbar() {
     const [click, setClick] = useState(false);
+    const handleClicks = function() {
+      setClick(!click);
+    }
+
+    const closeMobileMenu = function() {
+        setClick(false);
+    } 
+
     return (
         <>
             <nav className="navbar">
@@ -16,12 +24,14 @@ function Navbar() {
                     <Link to='/' className="navbar-logo">
                         <GiRocketThruster 
                         className="navbar-icon" 
-                           
+                        onClick={closeMobileMenu}                           
                         />
                         Skye
                     </Link>
-                    <div className="menu-icon">
+                    <div className="menu-icon" onClick={handleClicks}>
+                    {click ? <FaTimes /> : <FaBars />}
                     </div>
+                    
                 </div>
             </nav>
         </>
