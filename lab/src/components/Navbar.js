@@ -19,6 +19,7 @@ function Navbar() {
 
     return (
         <>
+        <IconContext.Provider value={{color: '#000'}}>
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to='/' className="navbar-logo">
@@ -31,9 +32,38 @@ function Navbar() {
                     <div className="menu-icon" onClick={handleClicks}>
                     {click ? <FaTimes /> : <FaBars />}
                     </div>
-                    
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className="nav-item">
+                        <NavLink to="/" 
+                        className={ function({ isActive }) {
+                            return "nav-links" + (isActive ? " activated" : "")}
+                        } onClick={closeMobileMenu} >
+                            Home
+                        </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                        <NavLink to="/about" 
+                        className={ function({ isActive }) {
+                            return "nav-links" + (isActive ? " activated" : "")}
+                        }onClick={closeMobileMenu}
+                        >
+                            About
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+
+                        <NavLink to="/contact" 
+                        className={ function({ isActive }) {
+                            return "nav-links" + (isActive ? " activated" : "")}
+                        } onClick={closeMobileMenu}>
+                            Contact
+                        </NavLink>
+                    </li>
+                    </ul>
                 </div>
             </nav>
+            </IconContext.Provider>
         </>
     );
 }

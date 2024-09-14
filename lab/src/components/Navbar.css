@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+.navbar-container {
+    background-color: #141414;
+    display: flex;
+    height: 150px;
+}
+.navbar-logo {
+    color: #fff;
+    position: relative;
+    top: 40px;
+    left: 30px;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    display: flex;
+}
+.navbar-logo {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    margin: 2px;
+}
+.navbar-icon {
+    background-image: linear-gradient(to right, #fff 80%, #aaa 20%);
+    background-size: cover;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    z-index: 1;
+    
+}
+.navbar-icon {
+    margin-top: 20px 20px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    left: 60%;
+    top: 1rem;
+}
+.nav-item {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 25px;
+}   
+.nav-item:hover {
+   border-bottom: 2px solid #fff;
+   padding: 4px 10px;
+   }
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 4px;
+}
+.nav-links:hover {
+    width: 100%;
+    background-image: linear-gradient(to right, #faebaf, #9bdd31);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+}
+.activated {
+    background-color: whitesmoke;
+    color: #222;
+    font-weight: bold;
+    border-radius: 4px;
+    transform: scale(2.2deg)
+}
+
+
+/*.home,
+.about,
+.contact {
+    background: #222;
+    color: #fff;
+    position: absolute;
+    top: 23%;
+    left: 0%;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-icon {
+    font-size: 5rem;
+    padding: 2px;
+}*/
+
+.home,
+.about,
+.contact {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: #000;
+  color: #fff;
+}
+ 
+.page-icon {
+    margin-left: 1rem;
+    font-size: 100px;
+  }
+  
+
+
+@media screen and (max-width: 860px) {
+    .navbar-container {
+        width: 100%;
+        height: 150px;
+        z-index: 999;
+        max-width: 1300px;
+        padding: 0;
+        display: block;
+    }
+    .nav-menu,
+    .nav-item,
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+    }
+
+}
+    
